@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Specimen Size Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 50px;
+            background-color: blueviolet;
+        }
+
+        input,
+        button {
+            padding: 8px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Microscope Specimen Size Calculator</h2>
+    <form method="POST">
+        <label>Username:</label><br>
+        <input type="text" name="username" required><br>
+
+        <label>Microscope Size (μm):</label><br>
+        <input type="number" name="microscope_size" step="any" required><br>
+
+        <label>Magnification:</label><br>
+        <input type="number" name="magnification" step="any" required><br>
+
+        <button type="submit">Calculate & Save</button>
+    </form>
+
+    {% if result %}
+    <h3>{{ result }}</h3>
+    {% endif %}
+</body>
+
+</html>
